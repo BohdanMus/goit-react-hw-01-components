@@ -1,14 +1,16 @@
-const Statistics = ({label, percentage }) => {
+export const Statistics = ({ title, stats }) => {
   return (
-    <section class="statistics">
-      <h2 class="title">Upload stats</h2>
-      <ul class="stat-list">
-        <li class="item">
-          <span class="label">{label}</span>
-          <span class="percentage">{percentage}</span>
-        </li>
+    <section className="statistics">
+      <h2 className="title">{title}</h2>
+
+      <ul className="stat-list">
+        {stats.map(stat => (
+          <li key={stat.id} className="item">
+            <span className="label">{stat.label}</span>
+            <span className="percentage">{stat.percentage}%</span>
+          </li>
+        ))}
       </ul>
     </section>
   );
 };
-export default Statistics;

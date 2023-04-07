@@ -1,19 +1,19 @@
-import Profile from './Profile';
-import Statistics from './Statistics';
-import StatisticsList from './StatisticsList';
+import { Profile } from './Profile';
 import user from '../path/to/user.json';
+import { Statistics } from './Statistics';
 import data from '../path/to/data.json';
+
 
 export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
+        flexDirection: 'column',
+        fontSize: 20,
+        color: 'black',
       }}
     >
       <Profile
@@ -24,7 +24,6 @@ export const App = () => {
         stats={user.stats}
       />
       <Statistics title="Upload stats" stats={data} />
-      <Statistics stats={data} />
     </div>
   );
 };
