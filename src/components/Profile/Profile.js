@@ -13,15 +13,15 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       </ProfileDescription>
       <ProfileStats>
         <li>
-          <span>Followers: </span>
+          <span>Followers </span>
           <span>{stats.followers}</span>
         </li>
         <li>
-          <span>Views: </span>
+          <span>Views </span>
           <span>{stats.views}</span>
         </li>
         <li>
-          <span>Likes: </span>
+          <span>Likes </span>
           <span>{stats.likes}</span>
         </li>
       </ProfileStats>
